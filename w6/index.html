@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Nathaniel Eisel, 202220_SE111.32, 7/22/2022-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Nathaniel Eisel">
+    <meta name="description" content="w6 javascript assignment">
+    <title>Week 6 | Javascript Pay Calculator</title>
+</head>
+<body>
+    <h1>Pay Calculator</h1>
+    <script>
+        var hourly = prompt("Hourly pay: ")
+        var hours = prompt("Hours worked: ")
+        var taxrate = prompt("Tax rate (in percent): ")
+        var gross = Number(hourly) * Number(hours)
+        var usshare = gross * (Number(taxrate) / 100)
+        var net = gross - usshare
+        alert("Gross Pay: " + gross.toFixed(2) + "\nUncle Sam's Share: " + usshare.toFixed(2) + "\nNet Pay: " + net.toFixed(2))
+        console.log("Gross Pay: " + gross.toFixed(2))
+        console.log("Uncle Sam's Share: " + usshare.toFixed(2))
+        console.log("Net Pay: " + net.toFixed(2))
+    </script>
+</body>
